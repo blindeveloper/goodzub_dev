@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "npm i && ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --open",
-    "buildwin": "SET PROD_ENV=1 && ./node_modules/webpack/bin/webpack.js --config webpack.config.js",
+    "buildwin": "SET PROD_ENV=1 && node ./node_modules/webpack/bin/webpack.js --config webpack.config.js",
     "buildmac": "export PROD_ENV=1 && ./node_modules/webpack/bin/webpack.js --config webpack.config.js",
     "test": "jest",
     "eslint": "./node_modules/.bin/eslint --ext .js --ext .jsx src --fix",
@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^1.5.0",
     "query-string": "^6.1.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
