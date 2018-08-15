@@ -33,6 +33,10 @@ module.exports = {
           // use style-loader in development
           fallback: 'style-loader'
         })
+      },
+      {
+        test: /\.css$/,
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }]
       }
     ]
   },
@@ -40,7 +44,7 @@ module.exports = {
     extractSass,
     new HtmlWebpackPlugin({
       title:'React init',
-      template: path.resolve(__dirname, 'src/components/pages/index.html')
+      template: path.resolve(__dirname, 'src/index.html')
     })
   ],
   devServer: {
